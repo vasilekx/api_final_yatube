@@ -16,6 +16,6 @@ class IsAuthOrReadOnly(viewsets.ModelViewSet):
 
 
 class CreateListViewSet(mixins.CreateModelMixin,
-                        mixins.ListModelMixin ,
+                        mixins.ListModelMixin,
                         viewsets.GenericViewSet):
     pass
