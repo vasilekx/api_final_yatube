@@ -1,7 +1,6 @@
 # api/permissions.py
 
-from rest_framework.permissions import (BasePermission,
-                                        SAFE_METHODS)
+from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 
 class IsOwnerOrReadOnly(BasePermission):
@@ -17,13 +16,7 @@ class IsOwnerOrReadOnly(BasePermission):
         )
 
     def has_object_permission(self, request, view, obj):
-        return obj.author == request.user
-
-
-class ReadOnly(BasePermission):
-    """
-    Анонимным пользователям предоставляется доступ только для чтения.
-    """
-
-    def has_permission(self, request, view):
-        return request.method in SAFE_METHODS
+        return (
+            request.method in SAFE_METHODS
+            or obj.author == request.user
+        )
