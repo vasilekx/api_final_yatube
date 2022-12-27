@@ -16,8 +16,12 @@ API разработан для [учебного проекта Yatube](https:/
 
 Клонировать репозиторий и перейти в него в командной строке:
 
-```python
+```bash
 git clone git@github.com:vasilekx/api_final_yatube.git
+```
+
+```bash
+cd api_final_yatube
 ```
 
 Cоздать и активировать виртуальное окружение:
