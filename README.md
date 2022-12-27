@@ -1,9 +1,16 @@
-# api_final
+# Проект API_Yatube (API)
+
 ## Описание
 
 API разработан для учебного проекта Yatube на DRF. API позволяет аутентифицированным пользователям управлять своим контентом. Анонимный пользователь есть доступ только на чтение ограниченной информации.
 
+## Применяемые технологи
 
+[![Python](https://img.shields.io/badge/Python-3.7-blue?style=flat-square&logo=Python&logoColor=3776AB&labelColor=d0d0d0)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-2.2.16-blue?style=flat-square&logo=Django&logoColor=3776AB&labelColor=d0d0d0)](https://docs.djangoproject.com/en/2.2/)
+[![Django REST framework](https://img.shields.io/badge/Django_REST_framework-3.12.4-blue?style=flat-square&logo=Django&logoColor=3776AB&labelColor=d0d0d0)](https://www.django-rest-framework.org/)
+[![djoser](https://img.shields.io/badge/djoser-2.1.0-blue?style=flat-square&logoColor=3776AB&labelColor=d0d0d0)](https://djoser.readthedocs.io/en/latest/)
+[![Pillow](https://img.shields.io/badge/Pillow-8.3.1-blue?style=flat-square&logoColor=3776AB&labelColor=d0d0d0)](https://pillow.readthedocs.io/en/stable/)
 
 ## Установка
 
@@ -46,7 +53,6 @@ python3 manage.py runserver
 ```
 
 
-
 ## Примеры запросов к API
 
 #### Получение публикаций
@@ -55,7 +61,7 @@ python3 manage.py runserver
 
 **GET**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/posts/?limit=2&offset=4
 ```
 
@@ -88,14 +94,13 @@ http://127.0.0.1:8000/api/v1/posts/?limit=2&offset=4
 ```
 
 
-
 #### Получение публикации
 
 Получение публикации по **id**.
 
 **GET**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/posts/{id}/
 ```
 
@@ -113,14 +118,13 @@ http://127.0.0.1:8000/api/v1/posts/{id}/
 ```
 
 
-
 #### Создание публикации
 
 Добавление новой публикации в коллекцию публикаций. Анонимные запросы запрещены.
 
 **POST**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/posts/
 ```
 
@@ -145,14 +149,13 @@ http://127.0.0.1:8000/api/v1/posts/
 ```
 
 
-
 #### Получение комментариев
 
 Получение всех комментариев к публикации.
 
 **GET**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/
 ```
 
@@ -171,14 +174,13 @@ http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/
 ```
 
 
-
 #### Обновление комментария
 
 Обновление комментария к публикации по **id**. Обновить комментарий может только автор комментария. Анонимные запросы запрещены.
 
 **PUT**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/{id}/
 ```
 
@@ -191,17 +193,15 @@ http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/{id}/
 ```
 
 
-
 #### Удаление комментария
 
 Удаление комментария к публикации по **id**. Обновить комментарий может только автор комментария. Анонимные запросы запрещены.
 
 **DEL**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/{id}/
 ```
-
 
 
 #### Список сообществ
@@ -210,7 +210,7 @@ http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/{id}/
 
 **GET**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/groups/
 ```
 
@@ -228,14 +228,13 @@ http://127.0.0.1:8000/api/v1/groups/
 ```
 
 
-
 #### Информация о сообществе
 
 Получение информации о сообществе по **id**.
 
 **GET**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/groups/{id}/
 ```
 
@@ -251,14 +250,13 @@ http://127.0.0.1:8000/api/v1/groups/{id}/
 ```
 
 
-
 #### Подписки
 
 Возвращает все подписки пользователя, сделавшего запрос. Анонимные запросы запрещены.
 
 **GET**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/follow/
 ```
 
@@ -274,14 +272,13 @@ http://127.0.0.1:8000/api/v1/follow/
 ```
 
 
-
 #### Получить JWT-токен
 
 Получение JWT-токена.
 
 **POST**-запрос:
 
-```http
+```
 http://127.0.0.1:8000/api/v1/jwt/create/
 ```
 
@@ -303,3 +300,5 @@ http://127.0.0.1:8000/api/v1/jwt/create/
 }
 ```
 
+## Автор проекта
+[Владислав Василенко](https://github.com/vasilekx)
